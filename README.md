@@ -48,13 +48,17 @@ npm run dev
 npm run db:seed
 ```
 
+## Variáveis de ambiente:
+WIP
+
 ## Rotas da API:
 
 Você pode testar a API com softwares como [`Insomnia`](https://insomnia.rest/download), [`Postman`](https://www.postman.com/) ou [`Thunder Client`](https://www.thunderclient.com/).
 
   - GET: `'/query'`
   > Este _endpoint_ retorna todos os reports.
-
+  - POST: `'/report'`
+  > Este _endpoint_ insere os dados de usuário e report no banco de dados.
 <br />
 
 ---
