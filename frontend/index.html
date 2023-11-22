@@ -33,6 +33,10 @@
     <section>
         <h2>Relatar situação</h2>
         <form>
+            <label for="zip_code">CEP:
+                <input type="text" id="zip_code" name="zip_code" required>
+            </label>
+            <button type="button" id="api_cep">Pesquisar</button>
             <label for="street">Rua:
                 <input type="text" id="street" name="street" required>
             </label>
@@ -47,9 +51,6 @@
             </label>
             <label for="city">Cidade:
                 <input type="text" id="city" name="city" required>
-            </label>
-            <label for="zip_code">CEP:
-                <input type="text" id="zip_code" name="zip_code" required>
             </label>
             <label for="state">Estado:
                 <input type="text" id="state" name="state" required>
@@ -69,8 +70,9 @@
             </label>
         </form>
     </section>
-    <button type="button">Enviar Relato</button>
+    <button type="button" id="send_report">Enviar Relato</button>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
