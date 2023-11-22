@@ -10,7 +10,7 @@ const query = `
         
     CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    full_name VARCHAR(45) DEFAULT 'Anônimo',
+    full_name VARCHAR(45),
     document_number VARCHAR(11),
     phone VARCHAR(45),
     email VARCHAR(45),
@@ -41,15 +41,16 @@ const query = `
         
     INSERT INTO users (full_name, document_number, phone, email)
     VALUES
+    ('Anônimo', ${null}, ${null}, ${null}),
     ('João Silva', '12345678901', '555-1234', 'joao.silva@example.com'),
     ('Maria Santos', '98765432101', '555-5678', 'maria.santos@example.com'),
     ('Carlos Oliveira', '55566677788', '555-9876', 'carlos.oliveira@example.com');
 
     INSERT INTO reports (user_id, street, number, neighborhood, city, zip_code, state, complement, report, report_type, resident, image)
     VALUES
-    (1, 'Rua A', '123', 'Centro', 'Cidade A', '12345678', 'SP', 'Apto 101', 'Buraco na via', 'Infraestrutura', TRUE, '/images/report1.jpg'),
     (2, 'Rua B', '456', 'Bairro X', 'Cidade B', '87654321', 'RJ', 'Casa Verde', 'Problema de iluminação', 'Iluminação', FALSE, '/images/report2.jpg'),
-    (3, 'Rua C', '789', 'Bairro Y', 'Cidade C', '45678901', 'MG', 'Fundos', 'Calçada danificada', 'Infraestrutura', TRUE, '/images/report3.jpg');
+    (3, 'Rua C', '789', 'Bairro Y', 'Cidade C', '45678901', 'MG', 'Fundos', 'Calçada danificada', 'Infraestrutura', TRUE, '/images/report3.jpg'),
+    (4, 'Rua A', '123', 'Centro', 'Cidade A', '12345678', 'SP', 'Apto 101', 'Buraco na via', 'Infraestrutura', TRUE, '/images/report1.jpg');
 `;
 
 async function createDatabase() {
