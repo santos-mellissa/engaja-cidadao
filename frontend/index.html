@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engaja Cidadão</title>
+</head>
+
+<body>
+    <h1>Engaja Cidadão</h1>
+    <section>
+        <label for="resident">
+            <input type="checkbox" id="resident" name="resident">
+            Deseja se identificar?
+        </label>
+        <h2>Identificação do usuário</h2>
+        <form>
+            <label for="full_name">Nome completo:
+                <input type="text" id="full_name" name="full_name">
+            </label>
+            <label for="document_number">CPF:
+                <input type="text" id="document_number" name="document_number">
+            </label>
+            <label for="phone">Telefone:
+                <input type="text" id="phone" name="phone">
+            </label>
+            <label for="email">Email:
+                <input type="email" id="email" name="email">
+            </label>
+        </form>
+    </section>
+    <section>
+        <h2>Relatar situação</h2>
+        <form>
+            <label for="street">Rua:
+                <input type="text" id="street" name="street" required>
+            </label>
+            <label for="number">Número:
+                <input type="text" id="number" name="number" required>
+            </label>
+            <label for="complement">Complemento:
+                <input type="text" id="complement" name="complement">
+            </label>
+            <label for="neighborhood">Bairro:
+                <input type="text" id="neighborhood" name="neighborhood" required>
+            </label>
+            <label for="city">Cidade:
+                <input type="text" id="city" name="city" required>
+            </label>
+            <label for="zip_code">CEP:
+                <input type="text" id="zip_code" name="zip_code" required>
+            </label>
+            <label for="state">Estado:
+                <input type="text" id="state" name="state" required>
+            </label>
+            <label for="report">Descrição do Problema:
+                <textarea id="report" name="report" rows="4" required></textarea>
+            </label>
+            <label for="report_type">Tipo de Relato:
+                <input type="text" id="report_type" name="report_type" required>
+            </label>
+            <label for="resident">
+                <input type="checkbox" id="resident" name="resident">
+                Você reside neste local?
+            </label>
+            <label for="image">Imagem:
+                <input type="file" id="image" name="image">
+            </label>
+        </form>
+    </section>
+    <button type="button">Enviar Relato</button>
+
+</body>
+
+</html>
