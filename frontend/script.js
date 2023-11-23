@@ -19,7 +19,7 @@ const image = document.querySelector('#image');
 const searchButton = document.querySelector('#search_cep');
 const sendButton = document.querySelector('#send_report');
 const anonymousCheckbox = document.querySelector('#anonymous');
-const userSection = document.querySelector('#user_identification');
+const userForm = document.querySelector('#user_form');
 
 const brazilianStates = [
     'AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA',
@@ -36,10 +36,10 @@ brazilianStates.forEach((uf) => {
 
 anonymousCheckbox.addEventListener('change', () => {
     if (anonymousCheckbox.checked) {
-        console.log(userSection);
-        userSection.style.display = 'initial';
+        console.log(userForm);
+        userForm.style.display = 'initial';
     } else {
-        userSection.style.display = 'none';
+        userForm.style.display = 'none';
     }
 });
 

@@ -1,20 +1,103 @@
-#user_identification {
+#user_form {
     display: none;
 }
 
-img {
-    width: 500px;
+main {
+    display: flex;
+    gap: 128px;
 }
 
-header {
-    align-items: center;
+#intro {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 16px 32px;
+    height: 540px;
 }
 
-nav {
-    border: 1px solid red;
-    display: flex;
-    gap: 64px;
+img {
+    width: 400px;
+    margin: 0 auto;
 }
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#form {
+    width: 200%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#report-form > p {
+    font-size: 75%;
+}
+
+#report-form > form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#street, #city {
+    width: 225px;
+}
+
+#number {
+    width: 50px;
+}
+
+#report-label {
+    display: flex;
+    flex-direction: column;
+}
+
+#full_name, #email {
+    width: 250px;
+}
+
+.inputs-line {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#user_form > form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#send_report {
+    border: none;
+    height: 32px;
+    width: 256px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#send_report:hover {
+    transform: scale(1.02);
+}
+
+#send_report:active {
+    transform: scale(0.98);
+}
+
+#send_report:disabled,
+#send_report:disabled:hover,
+#send_report:disabled:focus,
+#send_report:disabled:active {
+    cursor: not-allowed;
+    transform: scale(1)
+}
+

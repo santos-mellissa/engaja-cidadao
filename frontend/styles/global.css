@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+  margin: 0 128px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a,
+a:visited,
+a:focus {
+  color: inherit;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #6C63FF;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 32px;
+}
+
+nav {
+  display: flex;
+  gap: 64px;
+}
+
+input {
+  height: 28px;
+}
+
+button {
+  cursor: pointer;
+}
+
+footer {
+  border-top: 1px solid black;
+  margin-top: 32px;
+  padding: 12px 0;
+  text-align: center;
+}
+
+#logo {
+  font-size: 32px;
+}
+
+#logo1 {
+  font-weight: 900;
+}
+
+#logo2 {
+  font-weight: 200;
+}

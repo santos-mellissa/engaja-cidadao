@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/api.style.css">
     <title>Engaja Cidadão | API</title>
 </head>
 
 <body>
     <header>
-        <h1>Engaja Cidadão</h1>
+        <p id="logo"><span id="logo1">engaja</span><span id="logo2">cidadão</span></p>
         <nav>
             <a href="./index.html">Início</a>
             <a href="./api.html">API pública</a>
@@ -19,14 +19,23 @@
     </header>
 
     <main>
-       <a href="http://localhost:3001/query/">http://localhost:3001/query/</a>
-    </main>
+        <h2>Bem-vindo à Documentação da API Engaja Cidadão</h2>
+        <div>
+            <h3>Endpoint - GET: /query</h3>
+            <p>Este endpoint retorna todos os relatórios disponíveis, permitindo acesso aberto às informações coletadas.
+            </p>
+            <p>Explore e descubra como a Engaja Cidadão está construindo pontes entre cidadãos e melhorias urbanas.</p>
+            <br>
+            <p>Para explorar e interagir com a API, utilize a rota abaixo:</p>
+        </div>
+        <p id="api">
+            <strong>
+                <a href="http://localhost:3001/query/" target="_blank">http://localhost:3001/query/</a>
+            </strong>
+        </p>
 
-    <footer>Acesse o
-        <a href="https://github.com/santos-mellissa/engaja-cidadao" target="_blank">
-            <strong>repositório do projeto</strong>
-        </a>
-    </footer>
+        <img src="./assets/programmer-img.svg" alt="">
+    </main>
 
     <!-- Invoca o JavaScript -->
     <script src="script.js"></script>
