@@ -21,6 +21,19 @@ const sendButton = document.querySelector('#send_report');
 const anonymousCheckbox = document.querySelector('#anonymous');
 const userSection = document.querySelector('#user_identification');
 
+const brazilianStates = [
+    'AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA',
+    'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN',
+    'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'
+];
+
+brazilianStates.forEach((uf) => {
+    const stateOption = document.createElement('option');
+    stateOption.value = uf;
+    stateOption.innerText = uf;
+    state.appendChild(stateOption);
+})
+
 anonymousCheckbox.addEventListener('change', () => {
     if (anonymousCheckbox.checked) {
         console.log(userSection);
@@ -98,6 +111,18 @@ async function postFormData() {
     await fetch('http://localhost:3001/report', apiConfiguration);
     console.log(payload);
 }
+
+const requiredFields = [street, number, neighborhood, city, state, reportType];
+
+function validateForm() {
+    const requiredFieldsHasValues = requiredFields.map((field) => field.value.length !== 0)
+    const isValidated = requiredFieldsHasValues.every((value) => value === true);
+    sendButton.disabled = !isValidated
+}
+
+requiredFields.forEach((field) => {
+    field.addEventListener('input', validateForm)
+})
 
 searchButton.addEventListener('click', getDataFromCep);
 sendButton.addEventListener('click', postFormData);
