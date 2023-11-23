@@ -1,93 +1,120 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.style.css">
     <title>Engaja Cidadão</title>
 </head>
 
 <body>
-    <h1>Engaja Cidadão</h1>
-    <label for="anonymous">
-        <input type="checkbox" id="anonymous" name="anonymous">
-        Deseja se identificar?
-    </label>
-    <section id="user_identification">
-        <h2>Identificação do usuário</h2>
-        <form>
-            <label for="full_name">Nome completo:
-                <input type="text" id="full_name" name="full_name" placeholder="Nome completo">
+    <header>
+        <h1>Engaja Cidadão</h1>
+        <nav>
+            <a href="./index.html">Início</a>
+            <a href="./api.html">API pública</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Faça Parte da Transformação Urbana!</h2>
+            <p>Seja a voz que impulsiona mudanças positivas em sua comunidade. O Engaja Cidadão é a sua plataforma para relatar problemas urbanos, dos pequenos detalhes aos grandes desafios. Juntos, podemos construir cidades mais seguras, eficientes e vibrantes.</p>
+            <p>Não fique de fora, faça a diferença agora! Preencha o formulário abaixo e contribua para um futuro urbano melhor.</p>
+            <img src="./assets/main-img.svg" alt="">
+        </section>
+        <section>
+            <label for="anonymous">
+                <input type="checkbox" id="anonymous" name="anonymous">
+                Deseja se identificar?
             </label>
-            <label for="document_number">CPF:
-                <input type="text" id="document_number" name="document_number" maxlength="11" placeholder="CPF">
-            </label>
-            <label for="phone">Telefone:
-                <input type="tel" id="phone" name="phone" maxlength="11" placeholder="Telefone">
-            </label>
-            <label for="email">Email:
-                <input type="email" id="email" name="email" placeholder="Email">
-            </label>
-        </form>
-    </section>
-    <section>
-        <h2>Relatar situação</h2>
-        <p>Os campos sinalizados com <strong>*</strong> são obrigatórios.</p>
-        <form>
-            <label for="zip_code">CEP:
-                <input type="text" maxlength="8" id="zip_code" name="zip_code" placeholder="CEP">
-            </label>
-            <button type="button" id="search_cep">Pesquisar</button>
-            <label for="street">Rua:*
-                <input type="text" id="street" name="street" placeholder="Rua" required>
-            </label>
-            <label for="number">Número:*
-                <input type="text" maxlength="6"  id="number" name="number" placeholder="Número" required>
-            </label>
-            <label for="complement">Complemento:
-                <input type="text" id="complement" name="complement" placeholder="Complemento">
-            </label>
-            <label for="neighborhood">Bairro:*
-                <input type="text" id="neighborhood" name="neighborhood" placeholder="Bairro" required>
-            </label>
-            <label for="city">Cidade:*
-                <input type="text" id="city" name="city" placeholder="Cidade" required>
-            </label>
-            <label for="state">Estado:*
-                <select id="state" name="state" required>
-                    <option value="" selected>---</option>
-                </select>
-            </label>
-            <label for="resident">
-                <input type="checkbox" id="resident" name="resident">
-                Você reside neste local?
-            </label>
-            <label for="report_type">Tipo de Relato:*
-                <select id="report_type" name="report_type">
-                    <option value="" selected>---</option>
-                    <option value="Áreas de risco/Insegurança">Áreas de risco/Insegurança</option>
-                    <option value="Buraco na via">Buraco na via</option>
-                    <option value="Calçada danificada">Calçada danificada</option>
-                    <option value="Falta de acessibilidade">Falta de acessibilidade</option>
-                    <option value="Falta de sinalização">Falta de sinalização</option>
-                    <option value="Iluminação pública defeituosa">Iluminação pública defeituosa</option>
-                    <option value="Inundações/Problemas com drenagem">Inundações/Problemas com drenagem</option>
-                    <option value="Obstrução de via pública">Obstrução de via pública</option>
-                    <option value="Problemas com coleta de lixo">Problemas com coleta de lixo</option>
-                    <option value="Veículo abandonado">Veículo abandonado</option>
-                    <option value="Outro">Outro</option>                    
-                </select>
-            </label>
-            <label for="report">Descrição do Problema:
-                <textarea id="report" name="report" rows="4" placeholder="Descrição" required></textarea>
-            </label>
-            <label for="image">Imagem:
-                <input type="file" id="image" name="image">
-            </label>
-        </form>
-    </section>
-    <button type="button" id="send_report" disabled>Enviar Relato</button>
+            <div id="user_identification">
+                <h2>Identificação do usuário</h2>
+                <form>
+                    <label for="full_name">Nome completo:
+                        <input type="text" id="full_name" name="full_name" placeholder="Nome completo">
+                    </label>
+                    <label for="document_number">CPF:
+                        <input type="text" id="document_number" name="document_number" maxlength="11" placeholder="CPF">
+                    </label>
+                    <label for="phone">Telefone:
+                        <input type="tel" id="phone" name="phone" maxlength="11" placeholder="Telefone">
+                    </label>
+                    <label for="email">Email:
+                        <input type="email" id="email" name="email" placeholder="Email">
+                    </label>
+                </form>
+            </div>
+            <div>
+                <h2>Relatar situação</h2>
+                <p>Os campos sinalizados com <strong>*</strong> são obrigatórios.</p>
+                <form>
+                    <label for="zip_code">CEP:
+                        <input type="text" maxlength="8" id="zip_code" name="zip_code" placeholder="CEP">
+                    </label>
+                    <button type="button" id="search_cep">Pesquisar</button>
+                    <label for="street">Rua:*
+                        <input type="text" id="street" name="street" placeholder="Rua" required>
+                    </label>
+                    <label for="number">Número:*
+                        <input type="text" maxlength="6" id="number" name="number" placeholder="Número" required>
+                    </label>
+                    <label for="complement">Complemento:
+                        <input type="text" id="complement" name="complement" placeholder="Complemento">
+                    </label>
+                    <label for="neighborhood">Bairro:*
+                        <input type="text" id="neighborhood" name="neighborhood" placeholder="Bairro" required>
+                    </label>
+                    <label for="city">Cidade:*
+                        <input type="text" id="city" name="city" placeholder="Cidade" required>
+                    </label>
+                    <label for="state">Estado:*
+                        <select id="state" name="state" required>
+                            <option value="" selected>---</option>
+                        </select>
+                    </label>
+                    <label for="resident">
+                        <input type="checkbox" id="resident" name="resident">
+                        Você reside neste local?
+                    </label>
+                    <label for="report_type">Tipo de Relato:*
+                        <select id="report_type" name="report_type">
+                            <option value="" selected>---</option>
+                            <option value="Áreas de risco/Insegurança">Áreas de risco/Insegurança</option>
+                            <option value="Buraco na via">Buraco na via</option>
+                            <option value="Calçada danificada">Calçada danificada</option>
+                            <option value="Falta de acessibilidade">Falta de acessibilidade</option>
+                            <option value="Falta de sinalização">Falta de sinalização</option>
+                            <option value="Iluminação pública defeituosa">Iluminação pública defeituosa</option>
+                            <option value="Inundações/Problemas com drenagem">Inundações/Problemas com drenagem</option>
+                            <option value="Obstrução de via pública">Obstrução de via pública</option>
+                            <option value="Problemas com coleta de lixo">Problemas com coleta de lixo</option>
+                            <option value="Veículo abandonado">Veículo abandonado</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </label>
+                    <label for="report">Descrição do Problema:
+                        <textarea id="report" name="report" rows="4" placeholder="Descrição" required></textarea>
+                    </label>
+                    <label for="image">Imagem:
+                        <input type="file" id="image" name="image">
+                    </label>
+                </form>
+                <button type="button" id="send_report" disabled>Enviar Relato</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>Acesse o
+        <a href="https://github.com/santos-mellissa/engaja-cidadao" target="_blank">
+            <strong>repositório do projeto</strong>
+        </a>
+    </footer>
+
+    <!-- Invoca o JavaScript -->
     <script src="script.js"></script>
 </body>
+
 </html>
