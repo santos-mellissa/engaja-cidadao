@@ -81,6 +81,17 @@ async function getDataFromCep() {
     return console.log(data);
 }
 
+function clearAll() {
+    document.querySelectorAll("input").forEach((input) => {
+        input.value = "";
+        input.checked = false;
+    })
+    report.value = "";
+    state.value = "";
+    reportType.value = "";
+    sendButton.disabled = true;
+}
+
 async function postFormData() {
     const payload = {
         report: {
@@ -109,7 +120,8 @@ async function postFormData() {
         body: JSON.stringify(payload)
     }
     await fetch('http://localhost:3001/report', apiConfiguration);
-    console.log(payload);
+    clearAll();
+    alert("Seu relato foi cadastrado com sucesso! 😎");
 }
 
 const requiredFields = [street, number, neighborhood, city, state, reportType];

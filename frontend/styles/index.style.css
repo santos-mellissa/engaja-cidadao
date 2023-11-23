@@ -14,6 +14,10 @@ main {
     height: 540px;
 }
 
+#intro > h2 {
+    color: var(--cor-primaria);
+}
+
 img {
     width: 400px;
     margin: 0 auto;
@@ -40,6 +44,10 @@ img {
 
 #report-form > p {
     font-size: 75%;
+}
+
+#report-form > h2 {
+    color: var(--cor-primaria);
 }
 
 #report-form > form {
@@ -79,10 +87,15 @@ img {
 
 #send_report {
     border: none;
-    height: 32px;
+    height: 48px;
     width: 256px;
     text-align: center;
     margin: 0 auto;
+    margin-top: 4px;
+    background-color: var(--cor-primaria);
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
 }
 
 #send_report:hover {
@@ -98,6 +111,7 @@ img {
 #send_report:disabled:focus,
 #send_report:disabled:active {
     cursor: not-allowed;
-    transform: scale(1)
+    transform: scale(1);
+    background-color: var(--cor-desabilitada);
 }
 

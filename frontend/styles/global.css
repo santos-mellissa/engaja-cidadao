@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
 
 :root {
-  font-family: 'DM Sans', sans-serif;
+  --cor-primaria: #019CDE;
+  --cor-escura: #2A2D34;
+  --cor-secundaria: #B28B84;
+  --cor-desabilitada: #C2ECFE;
 }
 
 * {
+    font-family: 'DM Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    color: var(--cor-escura);
 }
 
 body {
@@ -22,12 +27,13 @@ ol, ul {
 a,
 a:visited,
 a:focus {
-  color: inherit;
+  color: var(--cor-primaria);
 }
 
 a:hover {
   cursor: pointer;
-  color: #6C63FF;
+  color: var(--cor-primaria);
+  font-weight: 500;
 }
 
 header {
@@ -44,7 +50,12 @@ nav {
 }
 
 input {
-  height: 28px;
+  height: 24px;
+  padding-left: 8px;
+}
+
+textarea, select {
+  padding-left: 8px;
 }
 
 button {
@@ -52,7 +63,7 @@ button {
 }
 
 footer {
-  border-top: 1px solid black;
+  border-top: 1px solid var(--cor-escura);
   margin-top: 32px;
   padding: 12px 0;
   text-align: center;
